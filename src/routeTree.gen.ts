@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ClinicRouteImport } from './routes/clinic'
+import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as ClinicIndexRouteImport } from './routes/clinic.index'
 import { Route as AdminIndexRouteImport } from './routes/admin.index'
@@ -63,6 +64,11 @@ import { Route as ClinicAccountingBankRouteImport } from './routes/clinic.accoun
 const ClinicRoute = ClinicRouteImport.update({
   id: '/clinic',
   path: '/clinic',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminRoute = AdminRouteImport.update({
@@ -318,6 +324,7 @@ const ClinicAccountingBankRoute = ClinicAccountingBankRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/admin': typeof AdminRouteWithChildren
+  '/auth': typeof AuthRoute
   '/clinic': typeof ClinicRouteWithChildren
   '/admin/activity': typeof AdminActivityRoute
   '/admin/clients': typeof AdminClientsRoute
@@ -369,6 +376,7 @@ export interface FileRoutesByFullPath {
   '/clinic/accounting/tax': typeof ClinicAccountingTaxRoute
 }
 export interface FileRoutesByTo {
+  '/auth': typeof AuthRoute
   '/admin/activity': typeof AdminActivityRoute
   '/admin/clients': typeof AdminClientsRoute
   '/admin/notifications': typeof AdminNotificationsRoute
@@ -421,6 +429,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/admin': typeof AdminRouteWithChildren
+  '/auth': typeof AuthRoute
   '/clinic': typeof ClinicRouteWithChildren
   '/admin/activity': typeof AdminActivityRoute
   '/admin/clients': typeof AdminClientsRoute
@@ -475,6 +484,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/admin'
+    | '/auth'
     | '/clinic'
     | '/admin/activity'
     | '/admin/clients'
@@ -526,6 +536,7 @@ export interface FileRouteTypes {
     | '/clinic/accounting/tax'
   fileRoutesByTo: FileRoutesByTo
   to:
+    | '/auth'
     | '/admin/activity'
     | '/admin/clients'
     | '/admin/notifications'
@@ -577,6 +588,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/admin'
+    | '/auth'
     | '/clinic'
     | '/admin/activity'
     | '/admin/clients'
@@ -630,6 +642,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   AdminRoute: typeof AdminRouteWithChildren
+  AuthRoute: typeof AuthRoute
   ClinicRoute: typeof ClinicRouteWithChildren
 }
 
@@ -640,6 +653,13 @@ declare module '@tanstack/react-router' {
       path: '/clinic'
       fullPath: '/clinic'
       preLoaderRoute: typeof ClinicRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin': {
@@ -1112,6 +1132,7 @@ const ClinicRouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   AdminRoute: AdminRouteWithChildren,
+  AuthRoute: AuthRoute,
   ClinicRoute: ClinicRouteWithChildren,
 }
 export const routeTree = rootRouteImport
