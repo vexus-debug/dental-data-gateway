@@ -9,61 +9,1111 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
+import { Route as ClinicRouteImport } from './routes/clinic'
+import { Route as AdminRouteImport } from './routes/admin'
+import { Route as ClinicIndexRouteImport } from './routes/clinic.index'
+import { Route as AdminIndexRouteImport } from './routes/admin.index'
+import { Route as ClinicWebsiteRouteImport } from './routes/clinic.website'
+import { Route as ClinicUsersRouteImport } from './routes/clinic.users'
+import { Route as ClinicTreatmentPlansRouteImport } from './routes/clinic.treatment-plans'
+import { Route as ClinicSubscriptionRouteImport } from './routes/clinic.subscription'
+import { Route as ClinicStaffRouteImport } from './routes/clinic.staff'
+import { Route as ClinicSettingsRouteImport } from './routes/clinic.settings'
+import { Route as ClinicReportsRouteImport } from './routes/clinic.reports'
+import { Route as ClinicQueueRouteImport } from './routes/clinic.queue'
+import { Route as ClinicPatientsRouteImport } from './routes/clinic.patients'
+import { Route as ClinicPatientPortalRouteImport } from './routes/clinic.patient-portal'
+import { Route as ClinicMarketingRouteImport } from './routes/clinic.marketing'
+import { Route as ClinicLaboratoryRouteImport } from './routes/clinic.laboratory'
+import { Route as ClinicInventoryRouteImport } from './routes/clinic.inventory'
+import { Route as ClinicInsuranceRouteImport } from './routes/clinic.insurance'
+import { Route as ClinicImagingRouteImport } from './routes/clinic.imaging'
+import { Route as ClinicDocumentsRouteImport } from './routes/clinic.documents'
+import { Route as ClinicDentalChartRouteImport } from './routes/clinic.dental-chart'
+import { Route as ClinicConsentFormsRouteImport } from './routes/clinic.consent-forms'
+import { Route as ClinicCommunicationRouteImport } from './routes/clinic.communication'
+import { Route as ClinicClinicalRecordsRouteImport } from './routes/clinic.clinical-records'
+import { Route as ClinicBillingRouteImport } from './routes/clinic.billing'
+import { Route as ClinicAppointmentsRouteImport } from './routes/clinic.appointments'
+import { Route as ClinicAnalyticsRouteImport } from './routes/clinic.analytics'
+import { Route as ClinicAccountingRouteImport } from './routes/clinic.accounting'
+import { Route as AdminTemplatesRouteImport } from './routes/admin.templates'
+import { Route as AdminSupportRouteImport } from './routes/admin.support'
+import { Route as AdminSubscriptionsRouteImport } from './routes/admin.subscriptions'
+import { Route as AdminSettingsRouteImport } from './routes/admin.settings'
+import { Route as AdminReportsRouteImport } from './routes/admin.reports'
+import { Route as AdminProductsRouteImport } from './routes/admin.products'
+import { Route as AdminPaymentsRouteImport } from './routes/admin.payments'
+import { Route as AdminNotificationsRouteImport } from './routes/admin.notifications'
+import { Route as AdminClientsRouteImport } from './routes/admin.clients'
+import { Route as AdminActivityRouteImport } from './routes/admin.activity'
+import { Route as ClinicAccountingTaxRouteImport } from './routes/clinic.accounting.tax'
+import { Route as ClinicAccountingReportsRouteImport } from './routes/clinic.accounting.reports'
+import { Route as ClinicAccountingReceivablesRouteImport } from './routes/clinic.accounting.receivables'
+import { Route as ClinicAccountingPayrollRouteImport } from './routes/clinic.accounting.payroll'
+import { Route as ClinicAccountingPayablesRouteImport } from './routes/clinic.accounting.payables'
+import { Route as ClinicAccountingLedgerRouteImport } from './routes/clinic.accounting.ledger'
+import { Route as ClinicAccountingJournalRouteImport } from './routes/clinic.accounting.journal'
+import { Route as ClinicAccountingFixedAssetsRouteImport } from './routes/clinic.accounting.fixed-assets'
+import { Route as ClinicAccountingExpensesRouteImport } from './routes/clinic.accounting.expenses'
+import { Route as ClinicAccountingChartOfAccountsRouteImport } from './routes/clinic.accounting.chart-of-accounts'
+import { Route as ClinicAccountingBudgetsRouteImport } from './routes/clinic.accounting.budgets'
+import { Route as ClinicAccountingBankRouteImport } from './routes/clinic.accounting.bank'
 
-const IndexRoute = IndexRouteImport.update({
+const ClinicRoute = ClinicRouteImport.update({
+  id: '/clinic',
+  path: '/clinic',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClinicIndexRoute = ClinicIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => ClinicRoute,
+} as any)
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AdminRoute,
+} as any)
+const ClinicWebsiteRoute = ClinicWebsiteRouteImport.update({
+  id: '/website',
+  path: '/website',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicUsersRoute = ClinicUsersRouteImport.update({
+  id: '/users',
+  path: '/users',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicTreatmentPlansRoute = ClinicTreatmentPlansRouteImport.update({
+  id: '/treatment-plans',
+  path: '/treatment-plans',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicSubscriptionRoute = ClinicSubscriptionRouteImport.update({
+  id: '/subscription',
+  path: '/subscription',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicStaffRoute = ClinicStaffRouteImport.update({
+  id: '/staff',
+  path: '/staff',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicSettingsRoute = ClinicSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicReportsRoute = ClinicReportsRouteImport.update({
+  id: '/reports',
+  path: '/reports',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicQueueRoute = ClinicQueueRouteImport.update({
+  id: '/queue',
+  path: '/queue',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicPatientsRoute = ClinicPatientsRouteImport.update({
+  id: '/patients',
+  path: '/patients',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicPatientPortalRoute = ClinicPatientPortalRouteImport.update({
+  id: '/patient-portal',
+  path: '/patient-portal',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicMarketingRoute = ClinicMarketingRouteImport.update({
+  id: '/marketing',
+  path: '/marketing',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicLaboratoryRoute = ClinicLaboratoryRouteImport.update({
+  id: '/laboratory',
+  path: '/laboratory',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicInventoryRoute = ClinicInventoryRouteImport.update({
+  id: '/inventory',
+  path: '/inventory',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicInsuranceRoute = ClinicInsuranceRouteImport.update({
+  id: '/insurance',
+  path: '/insurance',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicImagingRoute = ClinicImagingRouteImport.update({
+  id: '/imaging',
+  path: '/imaging',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicDocumentsRoute = ClinicDocumentsRouteImport.update({
+  id: '/documents',
+  path: '/documents',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicDentalChartRoute = ClinicDentalChartRouteImport.update({
+  id: '/dental-chart',
+  path: '/dental-chart',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicConsentFormsRoute = ClinicConsentFormsRouteImport.update({
+  id: '/consent-forms',
+  path: '/consent-forms',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicCommunicationRoute = ClinicCommunicationRouteImport.update({
+  id: '/communication',
+  path: '/communication',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicClinicalRecordsRoute = ClinicClinicalRecordsRouteImport.update({
+  id: '/clinical-records',
+  path: '/clinical-records',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicBillingRoute = ClinicBillingRouteImport.update({
+  id: '/billing',
+  path: '/billing',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicAppointmentsRoute = ClinicAppointmentsRouteImport.update({
+  id: '/appointments',
+  path: '/appointments',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicAnalyticsRoute = ClinicAnalyticsRouteImport.update({
+  id: '/analytics',
+  path: '/analytics',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const ClinicAccountingRoute = ClinicAccountingRouteImport.update({
+  id: '/accounting',
+  path: '/accounting',
+  getParentRoute: () => ClinicRoute,
+} as any)
+const AdminTemplatesRoute = AdminTemplatesRouteImport.update({
+  id: '/templates',
+  path: '/templates',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSupportRoute = AdminSupportRouteImport.update({
+  id: '/support',
+  path: '/support',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSubscriptionsRoute = AdminSubscriptionsRouteImport.update({
+  id: '/subscriptions',
+  path: '/subscriptions',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminSettingsRoute = AdminSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminReportsRoute = AdminReportsRouteImport.update({
+  id: '/reports',
+  path: '/reports',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminProductsRoute = AdminProductsRouteImport.update({
+  id: '/products',
+  path: '/products',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminPaymentsRoute = AdminPaymentsRouteImport.update({
+  id: '/payments',
+  path: '/payments',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminNotificationsRoute = AdminNotificationsRouteImport.update({
+  id: '/notifications',
+  path: '/notifications',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminClientsRoute = AdminClientsRouteImport.update({
+  id: '/clients',
+  path: '/clients',
+  getParentRoute: () => AdminRoute,
+} as any)
+const AdminActivityRoute = AdminActivityRouteImport.update({
+  id: '/activity',
+  path: '/activity',
+  getParentRoute: () => AdminRoute,
+} as any)
+const ClinicAccountingTaxRoute = ClinicAccountingTaxRouteImport.update({
+  id: '/tax',
+  path: '/tax',
+  getParentRoute: () => ClinicAccountingRoute,
+} as any)
+const ClinicAccountingReportsRoute = ClinicAccountingReportsRouteImport.update({
+  id: '/reports',
+  path: '/reports',
+  getParentRoute: () => ClinicAccountingRoute,
+} as any)
+const ClinicAccountingReceivablesRoute =
+  ClinicAccountingReceivablesRouteImport.update({
+    id: '/receivables',
+    path: '/receivables',
+    getParentRoute: () => ClinicAccountingRoute,
+  } as any)
+const ClinicAccountingPayrollRoute = ClinicAccountingPayrollRouteImport.update({
+  id: '/payroll',
+  path: '/payroll',
+  getParentRoute: () => ClinicAccountingRoute,
+} as any)
+const ClinicAccountingPayablesRoute =
+  ClinicAccountingPayablesRouteImport.update({
+    id: '/payables',
+    path: '/payables',
+    getParentRoute: () => ClinicAccountingRoute,
+  } as any)
+const ClinicAccountingLedgerRoute = ClinicAccountingLedgerRouteImport.update({
+  id: '/ledger',
+  path: '/ledger',
+  getParentRoute: () => ClinicAccountingRoute,
+} as any)
+const ClinicAccountingJournalRoute = ClinicAccountingJournalRouteImport.update({
+  id: '/journal',
+  path: '/journal',
+  getParentRoute: () => ClinicAccountingRoute,
+} as any)
+const ClinicAccountingFixedAssetsRoute =
+  ClinicAccountingFixedAssetsRouteImport.update({
+    id: '/fixed-assets',
+    path: '/fixed-assets',
+    getParentRoute: () => ClinicAccountingRoute,
+  } as any)
+const ClinicAccountingExpensesRoute =
+  ClinicAccountingExpensesRouteImport.update({
+    id: '/expenses',
+    path: '/expenses',
+    getParentRoute: () => ClinicAccountingRoute,
+  } as any)
+const ClinicAccountingChartOfAccountsRoute =
+  ClinicAccountingChartOfAccountsRouteImport.update({
+    id: '/chart-of-accounts',
+    path: '/chart-of-accounts',
+    getParentRoute: () => ClinicAccountingRoute,
+  } as any)
+const ClinicAccountingBudgetsRoute = ClinicAccountingBudgetsRouteImport.update({
+  id: '/budgets',
+  path: '/budgets',
+  getParentRoute: () => ClinicAccountingRoute,
+} as any)
+const ClinicAccountingBankRoute = ClinicAccountingBankRouteImport.update({
+  id: '/bank',
+  path: '/bank',
+  getParentRoute: () => ClinicAccountingRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
+  '/admin': typeof AdminRouteWithChildren
+  '/clinic': typeof ClinicRouteWithChildren
+  '/admin/activity': typeof AdminActivityRoute
+  '/admin/clients': typeof AdminClientsRoute
+  '/admin/notifications': typeof AdminNotificationsRoute
+  '/admin/payments': typeof AdminPaymentsRoute
+  '/admin/products': typeof AdminProductsRoute
+  '/admin/reports': typeof AdminReportsRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/admin/subscriptions': typeof AdminSubscriptionsRoute
+  '/admin/support': typeof AdminSupportRoute
+  '/admin/templates': typeof AdminTemplatesRoute
+  '/clinic/accounting': typeof ClinicAccountingRouteWithChildren
+  '/clinic/analytics': typeof ClinicAnalyticsRoute
+  '/clinic/appointments': typeof ClinicAppointmentsRoute
+  '/clinic/billing': typeof ClinicBillingRoute
+  '/clinic/clinical-records': typeof ClinicClinicalRecordsRoute
+  '/clinic/communication': typeof ClinicCommunicationRoute
+  '/clinic/consent-forms': typeof ClinicConsentFormsRoute
+  '/clinic/dental-chart': typeof ClinicDentalChartRoute
+  '/clinic/documents': typeof ClinicDocumentsRoute
+  '/clinic/imaging': typeof ClinicImagingRoute
+  '/clinic/insurance': typeof ClinicInsuranceRoute
+  '/clinic/inventory': typeof ClinicInventoryRoute
+  '/clinic/laboratory': typeof ClinicLaboratoryRoute
+  '/clinic/marketing': typeof ClinicMarketingRoute
+  '/clinic/patient-portal': typeof ClinicPatientPortalRoute
+  '/clinic/patients': typeof ClinicPatientsRoute
+  '/clinic/queue': typeof ClinicQueueRoute
+  '/clinic/reports': typeof ClinicReportsRoute
+  '/clinic/settings': typeof ClinicSettingsRoute
+  '/clinic/staff': typeof ClinicStaffRoute
+  '/clinic/subscription': typeof ClinicSubscriptionRoute
+  '/clinic/treatment-plans': typeof ClinicTreatmentPlansRoute
+  '/clinic/users': typeof ClinicUsersRoute
+  '/clinic/website': typeof ClinicWebsiteRoute
+  '/admin/': typeof AdminIndexRoute
+  '/clinic/': typeof ClinicIndexRoute
+  '/clinic/accounting/bank': typeof ClinicAccountingBankRoute
+  '/clinic/accounting/budgets': typeof ClinicAccountingBudgetsRoute
+  '/clinic/accounting/chart-of-accounts': typeof ClinicAccountingChartOfAccountsRoute
+  '/clinic/accounting/expenses': typeof ClinicAccountingExpensesRoute
+  '/clinic/accounting/fixed-assets': typeof ClinicAccountingFixedAssetsRoute
+  '/clinic/accounting/journal': typeof ClinicAccountingJournalRoute
+  '/clinic/accounting/ledger': typeof ClinicAccountingLedgerRoute
+  '/clinic/accounting/payables': typeof ClinicAccountingPayablesRoute
+  '/clinic/accounting/payroll': typeof ClinicAccountingPayrollRoute
+  '/clinic/accounting/receivables': typeof ClinicAccountingReceivablesRoute
+  '/clinic/accounting/reports': typeof ClinicAccountingReportsRoute
+  '/clinic/accounting/tax': typeof ClinicAccountingTaxRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
+  '/admin/activity': typeof AdminActivityRoute
+  '/admin/clients': typeof AdminClientsRoute
+  '/admin/notifications': typeof AdminNotificationsRoute
+  '/admin/payments': typeof AdminPaymentsRoute
+  '/admin/products': typeof AdminProductsRoute
+  '/admin/reports': typeof AdminReportsRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/admin/subscriptions': typeof AdminSubscriptionsRoute
+  '/admin/support': typeof AdminSupportRoute
+  '/admin/templates': typeof AdminTemplatesRoute
+  '/clinic/accounting': typeof ClinicAccountingRouteWithChildren
+  '/clinic/analytics': typeof ClinicAnalyticsRoute
+  '/clinic/appointments': typeof ClinicAppointmentsRoute
+  '/clinic/billing': typeof ClinicBillingRoute
+  '/clinic/clinical-records': typeof ClinicClinicalRecordsRoute
+  '/clinic/communication': typeof ClinicCommunicationRoute
+  '/clinic/consent-forms': typeof ClinicConsentFormsRoute
+  '/clinic/dental-chart': typeof ClinicDentalChartRoute
+  '/clinic/documents': typeof ClinicDocumentsRoute
+  '/clinic/imaging': typeof ClinicImagingRoute
+  '/clinic/insurance': typeof ClinicInsuranceRoute
+  '/clinic/inventory': typeof ClinicInventoryRoute
+  '/clinic/laboratory': typeof ClinicLaboratoryRoute
+  '/clinic/marketing': typeof ClinicMarketingRoute
+  '/clinic/patient-portal': typeof ClinicPatientPortalRoute
+  '/clinic/patients': typeof ClinicPatientsRoute
+  '/clinic/queue': typeof ClinicQueueRoute
+  '/clinic/reports': typeof ClinicReportsRoute
+  '/clinic/settings': typeof ClinicSettingsRoute
+  '/clinic/staff': typeof ClinicStaffRoute
+  '/clinic/subscription': typeof ClinicSubscriptionRoute
+  '/clinic/treatment-plans': typeof ClinicTreatmentPlansRoute
+  '/clinic/users': typeof ClinicUsersRoute
+  '/clinic/website': typeof ClinicWebsiteRoute
+  '/admin': typeof AdminIndexRoute
+  '/clinic': typeof ClinicIndexRoute
+  '/clinic/accounting/bank': typeof ClinicAccountingBankRoute
+  '/clinic/accounting/budgets': typeof ClinicAccountingBudgetsRoute
+  '/clinic/accounting/chart-of-accounts': typeof ClinicAccountingChartOfAccountsRoute
+  '/clinic/accounting/expenses': typeof ClinicAccountingExpensesRoute
+  '/clinic/accounting/fixed-assets': typeof ClinicAccountingFixedAssetsRoute
+  '/clinic/accounting/journal': typeof ClinicAccountingJournalRoute
+  '/clinic/accounting/ledger': typeof ClinicAccountingLedgerRoute
+  '/clinic/accounting/payables': typeof ClinicAccountingPayablesRoute
+  '/clinic/accounting/payroll': typeof ClinicAccountingPayrollRoute
+  '/clinic/accounting/receivables': typeof ClinicAccountingReceivablesRoute
+  '/clinic/accounting/reports': typeof ClinicAccountingReportsRoute
+  '/clinic/accounting/tax': typeof ClinicAccountingTaxRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
+  '/admin': typeof AdminRouteWithChildren
+  '/clinic': typeof ClinicRouteWithChildren
+  '/admin/activity': typeof AdminActivityRoute
+  '/admin/clients': typeof AdminClientsRoute
+  '/admin/notifications': typeof AdminNotificationsRoute
+  '/admin/payments': typeof AdminPaymentsRoute
+  '/admin/products': typeof AdminProductsRoute
+  '/admin/reports': typeof AdminReportsRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/admin/subscriptions': typeof AdminSubscriptionsRoute
+  '/admin/support': typeof AdminSupportRoute
+  '/admin/templates': typeof AdminTemplatesRoute
+  '/clinic/accounting': typeof ClinicAccountingRouteWithChildren
+  '/clinic/analytics': typeof ClinicAnalyticsRoute
+  '/clinic/appointments': typeof ClinicAppointmentsRoute
+  '/clinic/billing': typeof ClinicBillingRoute
+  '/clinic/clinical-records': typeof ClinicClinicalRecordsRoute
+  '/clinic/communication': typeof ClinicCommunicationRoute
+  '/clinic/consent-forms': typeof ClinicConsentFormsRoute
+  '/clinic/dental-chart': typeof ClinicDentalChartRoute
+  '/clinic/documents': typeof ClinicDocumentsRoute
+  '/clinic/imaging': typeof ClinicImagingRoute
+  '/clinic/insurance': typeof ClinicInsuranceRoute
+  '/clinic/inventory': typeof ClinicInventoryRoute
+  '/clinic/laboratory': typeof ClinicLaboratoryRoute
+  '/clinic/marketing': typeof ClinicMarketingRoute
+  '/clinic/patient-portal': typeof ClinicPatientPortalRoute
+  '/clinic/patients': typeof ClinicPatientsRoute
+  '/clinic/queue': typeof ClinicQueueRoute
+  '/clinic/reports': typeof ClinicReportsRoute
+  '/clinic/settings': typeof ClinicSettingsRoute
+  '/clinic/staff': typeof ClinicStaffRoute
+  '/clinic/subscription': typeof ClinicSubscriptionRoute
+  '/clinic/treatment-plans': typeof ClinicTreatmentPlansRoute
+  '/clinic/users': typeof ClinicUsersRoute
+  '/clinic/website': typeof ClinicWebsiteRoute
+  '/admin/': typeof AdminIndexRoute
+  '/clinic/': typeof ClinicIndexRoute
+  '/clinic/accounting/bank': typeof ClinicAccountingBankRoute
+  '/clinic/accounting/budgets': typeof ClinicAccountingBudgetsRoute
+  '/clinic/accounting/chart-of-accounts': typeof ClinicAccountingChartOfAccountsRoute
+  '/clinic/accounting/expenses': typeof ClinicAccountingExpensesRoute
+  '/clinic/accounting/fixed-assets': typeof ClinicAccountingFixedAssetsRoute
+  '/clinic/accounting/journal': typeof ClinicAccountingJournalRoute
+  '/clinic/accounting/ledger': typeof ClinicAccountingLedgerRoute
+  '/clinic/accounting/payables': typeof ClinicAccountingPayablesRoute
+  '/clinic/accounting/payroll': typeof ClinicAccountingPayrollRoute
+  '/clinic/accounting/receivables': typeof ClinicAccountingReceivablesRoute
+  '/clinic/accounting/reports': typeof ClinicAccountingReportsRoute
+  '/clinic/accounting/tax': typeof ClinicAccountingTaxRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/admin'
+    | '/clinic'
+    | '/admin/activity'
+    | '/admin/clients'
+    | '/admin/notifications'
+    | '/admin/payments'
+    | '/admin/products'
+    | '/admin/reports'
+    | '/admin/settings'
+    | '/admin/subscriptions'
+    | '/admin/support'
+    | '/admin/templates'
+    | '/clinic/accounting'
+    | '/clinic/analytics'
+    | '/clinic/appointments'
+    | '/clinic/billing'
+    | '/clinic/clinical-records'
+    | '/clinic/communication'
+    | '/clinic/consent-forms'
+    | '/clinic/dental-chart'
+    | '/clinic/documents'
+    | '/clinic/imaging'
+    | '/clinic/insurance'
+    | '/clinic/inventory'
+    | '/clinic/laboratory'
+    | '/clinic/marketing'
+    | '/clinic/patient-portal'
+    | '/clinic/patients'
+    | '/clinic/queue'
+    | '/clinic/reports'
+    | '/clinic/settings'
+    | '/clinic/staff'
+    | '/clinic/subscription'
+    | '/clinic/treatment-plans'
+    | '/clinic/users'
+    | '/clinic/website'
+    | '/admin/'
+    | '/clinic/'
+    | '/clinic/accounting/bank'
+    | '/clinic/accounting/budgets'
+    | '/clinic/accounting/chart-of-accounts'
+    | '/clinic/accounting/expenses'
+    | '/clinic/accounting/fixed-assets'
+    | '/clinic/accounting/journal'
+    | '/clinic/accounting/ledger'
+    | '/clinic/accounting/payables'
+    | '/clinic/accounting/payroll'
+    | '/clinic/accounting/receivables'
+    | '/clinic/accounting/reports'
+    | '/clinic/accounting/tax'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/admin/activity'
+    | '/admin/clients'
+    | '/admin/notifications'
+    | '/admin/payments'
+    | '/admin/products'
+    | '/admin/reports'
+    | '/admin/settings'
+    | '/admin/subscriptions'
+    | '/admin/support'
+    | '/admin/templates'
+    | '/clinic/accounting'
+    | '/clinic/analytics'
+    | '/clinic/appointments'
+    | '/clinic/billing'
+    | '/clinic/clinical-records'
+    | '/clinic/communication'
+    | '/clinic/consent-forms'
+    | '/clinic/dental-chart'
+    | '/clinic/documents'
+    | '/clinic/imaging'
+    | '/clinic/insurance'
+    | '/clinic/inventory'
+    | '/clinic/laboratory'
+    | '/clinic/marketing'
+    | '/clinic/patient-portal'
+    | '/clinic/patients'
+    | '/clinic/queue'
+    | '/clinic/reports'
+    | '/clinic/settings'
+    | '/clinic/staff'
+    | '/clinic/subscription'
+    | '/clinic/treatment-plans'
+    | '/clinic/users'
+    | '/clinic/website'
+    | '/admin'
+    | '/clinic'
+    | '/clinic/accounting/bank'
+    | '/clinic/accounting/budgets'
+    | '/clinic/accounting/chart-of-accounts'
+    | '/clinic/accounting/expenses'
+    | '/clinic/accounting/fixed-assets'
+    | '/clinic/accounting/journal'
+    | '/clinic/accounting/ledger'
+    | '/clinic/accounting/payables'
+    | '/clinic/accounting/payroll'
+    | '/clinic/accounting/receivables'
+    | '/clinic/accounting/reports'
+    | '/clinic/accounting/tax'
+  id:
+    | '__root__'
+    | '/admin'
+    | '/clinic'
+    | '/admin/activity'
+    | '/admin/clients'
+    | '/admin/notifications'
+    | '/admin/payments'
+    | '/admin/products'
+    | '/admin/reports'
+    | '/admin/settings'
+    | '/admin/subscriptions'
+    | '/admin/support'
+    | '/admin/templates'
+    | '/clinic/accounting'
+    | '/clinic/analytics'
+    | '/clinic/appointments'
+    | '/clinic/billing'
+    | '/clinic/clinical-records'
+    | '/clinic/communication'
+    | '/clinic/consent-forms'
+    | '/clinic/dental-chart'
+    | '/clinic/documents'
+    | '/clinic/imaging'
+    | '/clinic/insurance'
+    | '/clinic/inventory'
+    | '/clinic/laboratory'
+    | '/clinic/marketing'
+    | '/clinic/patient-portal'
+    | '/clinic/patients'
+    | '/clinic/queue'
+    | '/clinic/reports'
+    | '/clinic/settings'
+    | '/clinic/staff'
+    | '/clinic/subscription'
+    | '/clinic/treatment-plans'
+    | '/clinic/users'
+    | '/clinic/website'
+    | '/admin/'
+    | '/clinic/'
+    | '/clinic/accounting/bank'
+    | '/clinic/accounting/budgets'
+    | '/clinic/accounting/chart-of-accounts'
+    | '/clinic/accounting/expenses'
+    | '/clinic/accounting/fixed-assets'
+    | '/clinic/accounting/journal'
+    | '/clinic/accounting/ledger'
+    | '/clinic/accounting/payables'
+    | '/clinic/accounting/payroll'
+    | '/clinic/accounting/receivables'
+    | '/clinic/accounting/reports'
+    | '/clinic/accounting/tax'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
+  AdminRoute: typeof AdminRouteWithChildren
+  ClinicRoute: typeof ClinicRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/clinic': {
+      id: '/clinic'
+      path: '/clinic'
+      fullPath: '/clinic'
+      preLoaderRoute: typeof ClinicRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clinic/': {
+      id: '/clinic/'
+      path: '/'
+      fullPath: '/clinic/'
+      preLoaderRoute: typeof ClinicIndexRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/admin/': {
+      id: '/admin/'
+      path: '/'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/clinic/website': {
+      id: '/clinic/website'
+      path: '/website'
+      fullPath: '/clinic/website'
+      preLoaderRoute: typeof ClinicWebsiteRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/users': {
+      id: '/clinic/users'
+      path: '/users'
+      fullPath: '/clinic/users'
+      preLoaderRoute: typeof ClinicUsersRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/treatment-plans': {
+      id: '/clinic/treatment-plans'
+      path: '/treatment-plans'
+      fullPath: '/clinic/treatment-plans'
+      preLoaderRoute: typeof ClinicTreatmentPlansRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/subscription': {
+      id: '/clinic/subscription'
+      path: '/subscription'
+      fullPath: '/clinic/subscription'
+      preLoaderRoute: typeof ClinicSubscriptionRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/staff': {
+      id: '/clinic/staff'
+      path: '/staff'
+      fullPath: '/clinic/staff'
+      preLoaderRoute: typeof ClinicStaffRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/settings': {
+      id: '/clinic/settings'
+      path: '/settings'
+      fullPath: '/clinic/settings'
+      preLoaderRoute: typeof ClinicSettingsRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/reports': {
+      id: '/clinic/reports'
+      path: '/reports'
+      fullPath: '/clinic/reports'
+      preLoaderRoute: typeof ClinicReportsRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/queue': {
+      id: '/clinic/queue'
+      path: '/queue'
+      fullPath: '/clinic/queue'
+      preLoaderRoute: typeof ClinicQueueRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/patients': {
+      id: '/clinic/patients'
+      path: '/patients'
+      fullPath: '/clinic/patients'
+      preLoaderRoute: typeof ClinicPatientsRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/patient-portal': {
+      id: '/clinic/patient-portal'
+      path: '/patient-portal'
+      fullPath: '/clinic/patient-portal'
+      preLoaderRoute: typeof ClinicPatientPortalRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/marketing': {
+      id: '/clinic/marketing'
+      path: '/marketing'
+      fullPath: '/clinic/marketing'
+      preLoaderRoute: typeof ClinicMarketingRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/laboratory': {
+      id: '/clinic/laboratory'
+      path: '/laboratory'
+      fullPath: '/clinic/laboratory'
+      preLoaderRoute: typeof ClinicLaboratoryRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/inventory': {
+      id: '/clinic/inventory'
+      path: '/inventory'
+      fullPath: '/clinic/inventory'
+      preLoaderRoute: typeof ClinicInventoryRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/insurance': {
+      id: '/clinic/insurance'
+      path: '/insurance'
+      fullPath: '/clinic/insurance'
+      preLoaderRoute: typeof ClinicInsuranceRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/imaging': {
+      id: '/clinic/imaging'
+      path: '/imaging'
+      fullPath: '/clinic/imaging'
+      preLoaderRoute: typeof ClinicImagingRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/documents': {
+      id: '/clinic/documents'
+      path: '/documents'
+      fullPath: '/clinic/documents'
+      preLoaderRoute: typeof ClinicDocumentsRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/dental-chart': {
+      id: '/clinic/dental-chart'
+      path: '/dental-chart'
+      fullPath: '/clinic/dental-chart'
+      preLoaderRoute: typeof ClinicDentalChartRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/consent-forms': {
+      id: '/clinic/consent-forms'
+      path: '/consent-forms'
+      fullPath: '/clinic/consent-forms'
+      preLoaderRoute: typeof ClinicConsentFormsRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/communication': {
+      id: '/clinic/communication'
+      path: '/communication'
+      fullPath: '/clinic/communication'
+      preLoaderRoute: typeof ClinicCommunicationRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/clinical-records': {
+      id: '/clinic/clinical-records'
+      path: '/clinical-records'
+      fullPath: '/clinic/clinical-records'
+      preLoaderRoute: typeof ClinicClinicalRecordsRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/billing': {
+      id: '/clinic/billing'
+      path: '/billing'
+      fullPath: '/clinic/billing'
+      preLoaderRoute: typeof ClinicBillingRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/appointments': {
+      id: '/clinic/appointments'
+      path: '/appointments'
+      fullPath: '/clinic/appointments'
+      preLoaderRoute: typeof ClinicAppointmentsRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/analytics': {
+      id: '/clinic/analytics'
+      path: '/analytics'
+      fullPath: '/clinic/analytics'
+      preLoaderRoute: typeof ClinicAnalyticsRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/accounting': {
+      id: '/clinic/accounting'
+      path: '/accounting'
+      fullPath: '/clinic/accounting'
+      preLoaderRoute: typeof ClinicAccountingRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/admin/templates': {
+      id: '/admin/templates'
+      path: '/templates'
+      fullPath: '/admin/templates'
+      preLoaderRoute: typeof AdminTemplatesRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/support': {
+      id: '/admin/support'
+      path: '/support'
+      fullPath: '/admin/support'
+      preLoaderRoute: typeof AdminSupportRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/subscriptions': {
+      id: '/admin/subscriptions'
+      path: '/subscriptions'
+      fullPath: '/admin/subscriptions'
+      preLoaderRoute: typeof AdminSubscriptionsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/settings': {
+      id: '/admin/settings'
+      path: '/settings'
+      fullPath: '/admin/settings'
+      preLoaderRoute: typeof AdminSettingsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/reports': {
+      id: '/admin/reports'
+      path: '/reports'
+      fullPath: '/admin/reports'
+      preLoaderRoute: typeof AdminReportsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/products': {
+      id: '/admin/products'
+      path: '/products'
+      fullPath: '/admin/products'
+      preLoaderRoute: typeof AdminProductsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/payments': {
+      id: '/admin/payments'
+      path: '/payments'
+      fullPath: '/admin/payments'
+      preLoaderRoute: typeof AdminPaymentsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/notifications': {
+      id: '/admin/notifications'
+      path: '/notifications'
+      fullPath: '/admin/notifications'
+      preLoaderRoute: typeof AdminNotificationsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/clients': {
+      id: '/admin/clients'
+      path: '/clients'
+      fullPath: '/admin/clients'
+      preLoaderRoute: typeof AdminClientsRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/admin/activity': {
+      id: '/admin/activity'
+      path: '/activity'
+      fullPath: '/admin/activity'
+      preLoaderRoute: typeof AdminActivityRouteImport
+      parentRoute: typeof AdminRoute
+    }
+    '/clinic/accounting/tax': {
+      id: '/clinic/accounting/tax'
+      path: '/tax'
+      fullPath: '/clinic/accounting/tax'
+      preLoaderRoute: typeof ClinicAccountingTaxRouteImport
+      parentRoute: typeof ClinicAccountingRoute
+    }
+    '/clinic/accounting/reports': {
+      id: '/clinic/accounting/reports'
+      path: '/reports'
+      fullPath: '/clinic/accounting/reports'
+      preLoaderRoute: typeof ClinicAccountingReportsRouteImport
+      parentRoute: typeof ClinicAccountingRoute
+    }
+    '/clinic/accounting/receivables': {
+      id: '/clinic/accounting/receivables'
+      path: '/receivables'
+      fullPath: '/clinic/accounting/receivables'
+      preLoaderRoute: typeof ClinicAccountingReceivablesRouteImport
+      parentRoute: typeof ClinicAccountingRoute
+    }
+    '/clinic/accounting/payroll': {
+      id: '/clinic/accounting/payroll'
+      path: '/payroll'
+      fullPath: '/clinic/accounting/payroll'
+      preLoaderRoute: typeof ClinicAccountingPayrollRouteImport
+      parentRoute: typeof ClinicAccountingRoute
+    }
+    '/clinic/accounting/payables': {
+      id: '/clinic/accounting/payables'
+      path: '/payables'
+      fullPath: '/clinic/accounting/payables'
+      preLoaderRoute: typeof ClinicAccountingPayablesRouteImport
+      parentRoute: typeof ClinicAccountingRoute
+    }
+    '/clinic/accounting/ledger': {
+      id: '/clinic/accounting/ledger'
+      path: '/ledger'
+      fullPath: '/clinic/accounting/ledger'
+      preLoaderRoute: typeof ClinicAccountingLedgerRouteImport
+      parentRoute: typeof ClinicAccountingRoute
+    }
+    '/clinic/accounting/journal': {
+      id: '/clinic/accounting/journal'
+      path: '/journal'
+      fullPath: '/clinic/accounting/journal'
+      preLoaderRoute: typeof ClinicAccountingJournalRouteImport
+      parentRoute: typeof ClinicAccountingRoute
+    }
+    '/clinic/accounting/fixed-assets': {
+      id: '/clinic/accounting/fixed-assets'
+      path: '/fixed-assets'
+      fullPath: '/clinic/accounting/fixed-assets'
+      preLoaderRoute: typeof ClinicAccountingFixedAssetsRouteImport
+      parentRoute: typeof ClinicAccountingRoute
+    }
+    '/clinic/accounting/expenses': {
+      id: '/clinic/accounting/expenses'
+      path: '/expenses'
+      fullPath: '/clinic/accounting/expenses'
+      preLoaderRoute: typeof ClinicAccountingExpensesRouteImport
+      parentRoute: typeof ClinicAccountingRoute
+    }
+    '/clinic/accounting/chart-of-accounts': {
+      id: '/clinic/accounting/chart-of-accounts'
+      path: '/chart-of-accounts'
+      fullPath: '/clinic/accounting/chart-of-accounts'
+      preLoaderRoute: typeof ClinicAccountingChartOfAccountsRouteImport
+      parentRoute: typeof ClinicAccountingRoute
+    }
+    '/clinic/accounting/budgets': {
+      id: '/clinic/accounting/budgets'
+      path: '/budgets'
+      fullPath: '/clinic/accounting/budgets'
+      preLoaderRoute: typeof ClinicAccountingBudgetsRouteImport
+      parentRoute: typeof ClinicAccountingRoute
+    }
+    '/clinic/accounting/bank': {
+      id: '/clinic/accounting/bank'
+      path: '/bank'
+      fullPath: '/clinic/accounting/bank'
+      preLoaderRoute: typeof ClinicAccountingBankRouteImport
+      parentRoute: typeof ClinicAccountingRoute
     }
   }
 }
 
+interface AdminRouteChildren {
+  AdminActivityRoute: typeof AdminActivityRoute
+  AdminClientsRoute: typeof AdminClientsRoute
+  AdminNotificationsRoute: typeof AdminNotificationsRoute
+  AdminPaymentsRoute: typeof AdminPaymentsRoute
+  AdminProductsRoute: typeof AdminProductsRoute
+  AdminReportsRoute: typeof AdminReportsRoute
+  AdminSettingsRoute: typeof AdminSettingsRoute
+  AdminSubscriptionsRoute: typeof AdminSubscriptionsRoute
+  AdminSupportRoute: typeof AdminSupportRoute
+  AdminTemplatesRoute: typeof AdminTemplatesRoute
+  AdminIndexRoute: typeof AdminIndexRoute
+}
+
+const AdminRouteChildren: AdminRouteChildren = {
+  AdminActivityRoute: AdminActivityRoute,
+  AdminClientsRoute: AdminClientsRoute,
+  AdminNotificationsRoute: AdminNotificationsRoute,
+  AdminPaymentsRoute: AdminPaymentsRoute,
+  AdminProductsRoute: AdminProductsRoute,
+  AdminReportsRoute: AdminReportsRoute,
+  AdminSettingsRoute: AdminSettingsRoute,
+  AdminSubscriptionsRoute: AdminSubscriptionsRoute,
+  AdminSupportRoute: AdminSupportRoute,
+  AdminTemplatesRoute: AdminTemplatesRoute,
+  AdminIndexRoute: AdminIndexRoute,
+}
+
+const AdminRouteWithChildren = AdminRoute._addFileChildren(AdminRouteChildren)
+
+interface ClinicAccountingRouteChildren {
+  ClinicAccountingBankRoute: typeof ClinicAccountingBankRoute
+  ClinicAccountingBudgetsRoute: typeof ClinicAccountingBudgetsRoute
+  ClinicAccountingChartOfAccountsRoute: typeof ClinicAccountingChartOfAccountsRoute
+  ClinicAccountingExpensesRoute: typeof ClinicAccountingExpensesRoute
+  ClinicAccountingFixedAssetsRoute: typeof ClinicAccountingFixedAssetsRoute
+  ClinicAccountingJournalRoute: typeof ClinicAccountingJournalRoute
+  ClinicAccountingLedgerRoute: typeof ClinicAccountingLedgerRoute
+  ClinicAccountingPayablesRoute: typeof ClinicAccountingPayablesRoute
+  ClinicAccountingPayrollRoute: typeof ClinicAccountingPayrollRoute
+  ClinicAccountingReceivablesRoute: typeof ClinicAccountingReceivablesRoute
+  ClinicAccountingReportsRoute: typeof ClinicAccountingReportsRoute
+  ClinicAccountingTaxRoute: typeof ClinicAccountingTaxRoute
+}
+
+const ClinicAccountingRouteChildren: ClinicAccountingRouteChildren = {
+  ClinicAccountingBankRoute: ClinicAccountingBankRoute,
+  ClinicAccountingBudgetsRoute: ClinicAccountingBudgetsRoute,
+  ClinicAccountingChartOfAccountsRoute: ClinicAccountingChartOfAccountsRoute,
+  ClinicAccountingExpensesRoute: ClinicAccountingExpensesRoute,
+  ClinicAccountingFixedAssetsRoute: ClinicAccountingFixedAssetsRoute,
+  ClinicAccountingJournalRoute: ClinicAccountingJournalRoute,
+  ClinicAccountingLedgerRoute: ClinicAccountingLedgerRoute,
+  ClinicAccountingPayablesRoute: ClinicAccountingPayablesRoute,
+  ClinicAccountingPayrollRoute: ClinicAccountingPayrollRoute,
+  ClinicAccountingReceivablesRoute: ClinicAccountingReceivablesRoute,
+  ClinicAccountingReportsRoute: ClinicAccountingReportsRoute,
+  ClinicAccountingTaxRoute: ClinicAccountingTaxRoute,
+}
+
+const ClinicAccountingRouteWithChildren =
+  ClinicAccountingRoute._addFileChildren(ClinicAccountingRouteChildren)
+
+interface ClinicRouteChildren {
+  ClinicAccountingRoute: typeof ClinicAccountingRouteWithChildren
+  ClinicAnalyticsRoute: typeof ClinicAnalyticsRoute
+  ClinicAppointmentsRoute: typeof ClinicAppointmentsRoute
+  ClinicBillingRoute: typeof ClinicBillingRoute
+  ClinicClinicalRecordsRoute: typeof ClinicClinicalRecordsRoute
+  ClinicCommunicationRoute: typeof ClinicCommunicationRoute
+  ClinicConsentFormsRoute: typeof ClinicConsentFormsRoute
+  ClinicDentalChartRoute: typeof ClinicDentalChartRoute
+  ClinicDocumentsRoute: typeof ClinicDocumentsRoute
+  ClinicImagingRoute: typeof ClinicImagingRoute
+  ClinicInsuranceRoute: typeof ClinicInsuranceRoute
+  ClinicInventoryRoute: typeof ClinicInventoryRoute
+  ClinicLaboratoryRoute: typeof ClinicLaboratoryRoute
+  ClinicMarketingRoute: typeof ClinicMarketingRoute
+  ClinicPatientPortalRoute: typeof ClinicPatientPortalRoute
+  ClinicPatientsRoute: typeof ClinicPatientsRoute
+  ClinicQueueRoute: typeof ClinicQueueRoute
+  ClinicReportsRoute: typeof ClinicReportsRoute
+  ClinicSettingsRoute: typeof ClinicSettingsRoute
+  ClinicStaffRoute: typeof ClinicStaffRoute
+  ClinicSubscriptionRoute: typeof ClinicSubscriptionRoute
+  ClinicTreatmentPlansRoute: typeof ClinicTreatmentPlansRoute
+  ClinicUsersRoute: typeof ClinicUsersRoute
+  ClinicWebsiteRoute: typeof ClinicWebsiteRoute
+  ClinicIndexRoute: typeof ClinicIndexRoute
+}
+
+const ClinicRouteChildren: ClinicRouteChildren = {
+  ClinicAccountingRoute: ClinicAccountingRouteWithChildren,
+  ClinicAnalyticsRoute: ClinicAnalyticsRoute,
+  ClinicAppointmentsRoute: ClinicAppointmentsRoute,
+  ClinicBillingRoute: ClinicBillingRoute,
+  ClinicClinicalRecordsRoute: ClinicClinicalRecordsRoute,
+  ClinicCommunicationRoute: ClinicCommunicationRoute,
+  ClinicConsentFormsRoute: ClinicConsentFormsRoute,
+  ClinicDentalChartRoute: ClinicDentalChartRoute,
+  ClinicDocumentsRoute: ClinicDocumentsRoute,
+  ClinicImagingRoute: ClinicImagingRoute,
+  ClinicInsuranceRoute: ClinicInsuranceRoute,
+  ClinicInventoryRoute: ClinicInventoryRoute,
+  ClinicLaboratoryRoute: ClinicLaboratoryRoute,
+  ClinicMarketingRoute: ClinicMarketingRoute,
+  ClinicPatientPortalRoute: ClinicPatientPortalRoute,
+  ClinicPatientsRoute: ClinicPatientsRoute,
+  ClinicQueueRoute: ClinicQueueRoute,
+  ClinicReportsRoute: ClinicReportsRoute,
+  ClinicSettingsRoute: ClinicSettingsRoute,
+  ClinicStaffRoute: ClinicStaffRoute,
+  ClinicSubscriptionRoute: ClinicSubscriptionRoute,
+  ClinicTreatmentPlansRoute: ClinicTreatmentPlansRoute,
+  ClinicUsersRoute: ClinicUsersRoute,
+  ClinicWebsiteRoute: ClinicWebsiteRoute,
+  ClinicIndexRoute: ClinicIndexRoute,
+}
+
+const ClinicRouteWithChildren =
+  ClinicRoute._addFileChildren(ClinicRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
+  AdminRoute: AdminRouteWithChildren,
+  ClinicRoute: ClinicRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
